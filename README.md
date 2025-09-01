@@ -1,205 +1,140 @@
 # RestaurantIQ Analytics Platform - Frontend
 
-A React-based analytics dashboard for restaurant order trends and performance metrics.
+A **React-based analytics dashboard** for restaurant order trends and performance metrics.  
+Designed for **multi-location restaurants and enterprises** with real-time data insights.
+
+---
 
 ## 🚀 Features
 
-- **User Authentication**: Login/Register with JWT tokens
-- **Restaurant Management**: View, search, and filter restaurants
-- **Order Analytics**: Daily orders, revenue trends, and peak hours analysis
-- **Top Performers**: Top 3 restaurants by revenue
-- **Advanced Filtering**: Date range, amount range, and hour range filters with AM/PM display
-- **Interactive Charts**: Line charts, bar charts, and pie charts for data visualization
-- **Responsive Design**: Mobile-first approach with sticky navigation
+- **Authentication**: Login/Register with JWT tokens  
+- **Restaurant Management**: View, search, and filter restaurants  
+- **Order Analytics**: Daily orders, revenue trends, and peak hours  
+- **Top Performers**: Highlights top 3 restaurants by revenue  
+- **Advanced Filtering**: Date range, amount range, and hour range (with AM/PM)  
+- **Interactive Charts**: Line, bar, and pie charts  
+- **Responsive Design**: Mobile-first with sticky navigation  
+
+---
 
 ## 🛠️ Tech Stack
 
-- **React 19** - Frontend framework
-- **React Router DOM** - Client-side routing
-- **Axios** - HTTP client for API calls
-- **Recharts** - Data visualization library
-- **Tailwind CSS** - Utility-first CSS framework
-- **Date-fns** - Date manipulation library
+- **React 19** – Frontend framework  
+- **React Router DOM** – Client-side routing  
+- **Axios** – API calls  
+- **Recharts** – Data visualization  
+- **Tailwind CSS** – Styling  
+- **Date-fns** – Date manipulation  
+
+---
 
 ## 📋 Prerequisites
 
-Before running this project, make sure you have:
+- **Node.js** v14 or higher  
+- **npm** or **yarn**  
+- **Backend API** running at `http://localhost:8000`  
 
-- **Node.js** (v14 or higher)
-- **npm** or **yarn** package manager
-- **Backend API** running on `http://localhost:8000`
+---
 
 ## ⚡ Quick Start
 
-### 1. Clone the Repository
-
-```bash
+### 1. Clone Repository
 git clone <repository-url>
 cd restaurant-management-f
-```
-
-### 2. Install Dependencies
-
-```bash
 npm install
-```
-
-### 3. Environment Configuration
-
-Create a `.env` file in the root directory:
-
-```bash
 REACT_APP_API_URL=http://localhost:8000/api
-```
-
-### 4. Start Development Server
-
-```bash
 npm start
-```
-
-The application will open at [http://localhost:3000](http://localhost:3000)
-
-## 📁 Project Structure
-
-```
 src/
 ├── components/
 │   ├── charts/
-│   │   ├── DailyOrdersChart.js      # Daily orders trend chart
-│   │   ├── DailyRevenueChart.js     # Daily revenue trend chart
-│   │   ├── OrderValuePieChart.js    # Order value distribution
-│   │   └── PeakHoursChart.js        # Peak hours analysis
-│   ├── Dashboard.js                 # Main dashboard with filters
-│   ├── Home.js                      # Landing page
-│   ├── Login.js                     # Authentication component
-│   ├── RestaurantList.js            # Restaurant listing with search
-│   ├── RestaurantDetails.js         # Individual restaurant analytics
-│   ├── TopRestaurants.js            # Top performers display
-│   └── OrdersList.js                # Filtered orders table
+│   │   ├── DailyOrdersChart.js
+│   │   ├── DailyRevenueChart.js
+│   │   ├── OrderValuePieChart.js
+│   │   └── PeakHoursChart.js
+│   ├── Dashboard.js
+│   ├── Home.js
+│   ├── Login.js
+│   ├── RestaurantList.js
+│   ├── RestaurantDetails.js
+│   ├── TopRestaurants.js
+│   └── OrdersList.js
 ├── context/
-│   └── AuthContext.js               # Authentication state management
+│   └── AuthContext.js
 ├── services/
-│   └── api.js                       # API service layer
-├── App.js                           # Main app with routing
-└── index.js                         # Application entry point
-```
+│   └── api.js
+├── App.js
+└── index.js
+npm start       # Start dev server
+npm run build   # Build for production
+npm test        # Run tests
+npm run eject   # Eject from CRA
+API Endpoints
 
-## 🔧 Available Scripts
+The frontend connects to these APIs:
 
-### Development
+POST /api/login – User login
 
-```bash
-npm start          # Start development server
-npm run build      # Build for production
-npm test           # Run test suite
-npm run eject      # Eject from Create React App
-```
+POST /api/register – User registration
 
-## 🌐 API Integration
+GET /api/restaurants – List all restaurants
 
-The frontend expects these backend endpoints:
+GET /api/restaurants/{id}/trends – Restaurant trends
 
-- `POST /api/login` - User authentication
-- `POST /api/register` - User registration
-- `GET /api/restaurants` - Get all restaurants
-- `GET /api/restaurants/{id}/trends` - Get restaurant order trends
-- `GET /api/restaurants/top` - Get top restaurants by revenue
-- `GET /api/orders` - Get filtered orders list
-- `GET /api/dashboard/overview` - Get dashboard overview metrics
+GET /api/restaurants/top – Top restaurants by revenue
 
-## 🎯 Key Features Overview
+GET /api/orders – Orders with filters
 
-### Authentication System
-- **Dual-mode form**: Login/Register toggle
-- **Password strength indicator**: Real-time validation
-- **Error handling**: Specific validation messages
-- **JWT token management**: Secure authentication
+GET /api/dashboard/overview – Overview metrics
 
-### Dashboard Analytics
-- **Sticky navigation**: Always accessible header
-- **Restaurant sidebar**: Fixed selection panel
-- **Overview metrics**: Revenue, orders, AOV, active restaurants
-- **Real-time filtering**: Dynamic data updates
+Key Features Overview
+🔐 Authentication
 
-### Advanced Filters
-- **Date Range**: Calendar-based selection
-- **Amount Range**: Min/max order value filtering
-- **Hour Range**: Time picker with AM/PM display and clear functionality
+Login/Register toggle
 
-### Data Visualization
-- **Multiple chart types**: Line, bar, and pie charts
-- **Interactive elements**: Hover effects and animations
-- **Responsive design**: Mobile-optimized layouts
+Password strength validation
 
-## 🚀 Deployment
+JWT token-based authentication
 
-### Production Build
+Error messages for validation
 
-```bash
+
+Dashboard Analytics
+
+Sticky header
+
+Restaurant sidebar
+
+Key metrics (Revenue, Orders, AOV, Active restaurants)
+
+Real-time filtering
+
+🕵️ Advanced Filters
+
+Date range with calendar picker
+
+Min/max order value filter
+
+Hour range with 24H & AM/PM toggle
+
+Data Visualization
+
+Line charts, bar charts, pie charts
+
+Hover interactions and animations
+
+Fully responsive layout
+
+Build for Production
 npm run build
-```
 
-This creates a `build` folder with optimized production files.
+Security
 
-### Deployment Options
+JWT authentication
 
-1. **Static Hosting**: Deploy `build` folder to Netlify, Vercel, or AWS S3
-2. **Server Deployment**: Use nginx or Apache to serve static files
-3. **Docker**: Containerize with nginx for production
+Protected routes
 
-### Environment Variables for Production
+Input validation
 
-```bash
-REACT_APP_API_URL=https://your-api-domain.com/api
-```
+Error handling
 
-## 🔒 Security Features
-
-- **JWT Authentication**: Secure token-based auth
-- **Protected Routes**: Route guards for authenticated users
-- **Input Validation**: Client-side form validation
-- **Error Handling**: Secure error messages
-- **HTTPS Ready**: Production-ready security headers
-
-## 🎨 UI/UX Features
-
-- **Modern Design**: Gradient cards with hover effects
-- **Smooth Animations**: Transitions and micro-interactions
-- **Loading States**: User feedback during API calls
-- **Error States**: User-friendly error messages
-- **Mobile Responsive**: Touch-friendly interface
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **API Connection Failed**
-   - Check if backend server is running on port 8000
-   - Verify REACT_APP_API_URL in .env file
-
-2. **Authentication Not Working**
-   - Clear browser localStorage
-   - Check network tab for API response errors
-
-3. **Charts Not Displaying**
-   - Ensure Recharts is properly installed
-   - Check console for JavaScript errors
-
-### Development Tips
-
-- Use browser dev tools for debugging
-- Check Network tab for API call issues
-- Use React Developer Tools extension
-- Monitor console for error messages
-
-## 📞 Support
-
-For issues and questions:
-- Check the troubleshooting section above
-- Review API documentation
-- Ensure all dependencies are installed correctly
-
-## 📄 License
-
-This project is licensed under the MIT License.
+HTTPS ready
