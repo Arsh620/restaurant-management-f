@@ -1,5 +1,6 @@
 # RestaurantIQ Analytics Platform - Frontend
 
+<<<<<<< HEAD
 [![React](https://img.shields.io/badge/React-19.0.0-blue.svg)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-14%2B-green.svg)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -88,20 +89,51 @@ Before running this project, ensure you have the following installed:
 - **RAM**: Minimum 4GB (8GB recommended)
 - **Storage**: At least 2GB free space
 - **OS**: Windows 10+, macOS 10.14+, or Linux Ubuntu 18.04+
+=======
+A **React-based analytics dashboard** for restaurant order trends and performance metrics.  
+Designed for **multi-location restaurants and enterprises** with real-time data insights.
+
+---
+
+## 🚀 Features
+
+- **Authentication**: Login/Register with JWT tokens  
+- **Restaurant Management**: View, search, and filter restaurants  
+- **Order Analytics**: Daily orders, revenue trends, and peak hours  
+- **Top Performers**: Highlights top 3 restaurants by revenue  
+- **Advanced Filtering**: Date range, amount range, and hour range (with AM/PM)  
+- **Interactive Charts**: Line, bar, and pie charts  
+- **Responsive Design**: Mobile-first with sticky navigation  
+
+---
+
+## 🛠️ Tech Stack
+
+- **React 19** – Frontend framework  
+- **React Router DOM** – Client-side routing  
+- **Axios** – API calls  
+- **Recharts** – Data visualization  
+- **Tailwind CSS** – Styling  
+- **Date-fns** – Date manipulation  
+
+---
+
+## 📋 Prerequisites
+
+- **Node.js** v14 or higher  
+- **npm** or **yarn**  
+- **Backend API** running at `http://localhost:8000`  
+
+---
+>>>>>>> a055665ba86db53695a317bc31efce6d7f88a6e0
 
 ## ⚡ Quick Start
 
-### 1. Clone the Repository
-
-```bash
+### 1. Clone Repository
 git clone <repository-url>
 cd restaurant-management-f
-```
-
-### 2. Install Dependencies
-
-```bash
 npm install
+<<<<<<< HEAD
 ```
 
 ### 3. Environment Configuration
@@ -195,30 +227,39 @@ Check if everything is working correctly:
 ## 📁 Project Structure
 
 ```
+=======
+REACT_APP_API_URL=http://localhost:8000/api
+npm start
+>>>>>>> a055665ba86db53695a317bc31efce6d7f88a6e0
 src/
 ├── components/
 │   ├── charts/
-│   │   ├── DailyOrdersChart.js      # Daily orders trend chart
-│   │   ├── DailyRevenueChart.js     # Daily revenue trend chart
-│   │   ├── OrderValuePieChart.js    # Order value distribution
-│   │   └── PeakHoursChart.js        # Peak hours analysis
-│   ├── Dashboard.js                 # Main dashboard with filters
-│   ├── Home.js                      # Landing page
-│   ├── Login.js                     # Authentication component
-│   ├── RestaurantList.js            # Restaurant listing with search
-│   ├── RestaurantDetails.js         # Individual restaurant analytics
-│   ├── TopRestaurants.js            # Top performers display
-│   └── OrdersList.js                # Filtered orders table
+│   │   ├── DailyOrdersChart.js
+│   │   ├── DailyRevenueChart.js
+│   │   ├── OrderValuePieChart.js
+│   │   └── PeakHoursChart.js
+│   ├── Dashboard.js
+│   ├── Home.js
+│   ├── Login.js
+│   ├── RestaurantList.js
+│   ├── RestaurantDetails.js
+│   ├── TopRestaurants.js
+│   └── OrdersList.js
 ├── context/
-│   └── AuthContext.js               # Authentication state management
+│   └── AuthContext.js
 ├── services/
-│   └── api.js                       # API service layer
-├── App.js                           # Main app with routing
-└── index.js                         # Application entry point
-```
+│   └── api.js
+├── App.js
+└── index.js
+npm start       # Start dev server
+npm run build   # Build for production
+npm test        # Run tests
+npm run eject   # Eject from CRA
+API Endpoints
 
-## 🔧 Available Scripts
+The frontend connects to these APIs:
 
+<<<<<<< HEAD
 ### Development Commands
 
 ```bash
@@ -257,9 +298,15 @@ npm run deps:check     # Check for outdated dependencies
 npm run deps:update    # Update dependencies
 npm run size           # Analyze bundle size
 ```
+=======
+POST /api/login – User login
 
-## 🌐 API Integration
+POST /api/register – User registration
+>>>>>>> a055665ba86db53695a317bc31efce6d7f88a6e0
 
+GET /api/restaurants – List all restaurants
+
+<<<<<<< HEAD
 ### Authentication Endpoints
 
 | Method | Endpoint | Description | Request Body | Response |
@@ -337,35 +384,28 @@ All endpoints return consistent error responses:
 - `404` - Not Found
 - `422` - Validation Error
 - `500` - Internal Server Error
+=======
+GET /api/restaurants/{id}/trends – Restaurant trends
 
-## 🎯 Key Features Overview
+GET /api/restaurants/top – Top restaurants by revenue
+>>>>>>> a055665ba86db53695a317bc31efce6d7f88a6e0
 
-### Authentication System
-- **Dual-mode form**: Login/Register toggle
-- **Password strength indicator**: Real-time validation
-- **Error handling**: Specific validation messages
-- **JWT token management**: Secure authentication
+GET /api/orders – Orders with filters
 
-### Dashboard Analytics
-- **Sticky navigation**: Always accessible header
-- **Restaurant sidebar**: Fixed selection panel
-- **Overview metrics**: Revenue, orders, AOV, active restaurants
-- **Real-time filtering**: Dynamic data updates
+GET /api/dashboard/overview – Overview metrics
 
-### Advanced Filters
-- **Date Range**: Calendar-based selection
-- **Amount Range**: Min/max order value filtering
-- **Hour Range**: Time picker with AM/PM display and clear functionality
+Key Features Overview
+🔐 Authentication
 
-### Data Visualization
-- **Multiple chart types**: Line, bar, and pie charts
-- **Interactive elements**: Hover effects and animations
-- **Responsive design**: Mobile-optimized layouts
+Login/Register toggle
 
-## 🚀 Deployment
+Password strength validation
 
-### Production Build
+JWT token-based authentication
 
+Error messages for validation
+
+<<<<<<< HEAD
 ```bash
 # Create optimized production build
 npm run build
@@ -1035,3 +1075,46 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Made with ❤️ by [Your Name](https://github.com/yourusername)**
 
 **⭐ Star this repository if you found it helpful!**
+=======
+
+Dashboard Analytics
+
+Sticky header
+
+Restaurant sidebar
+
+Key metrics (Revenue, Orders, AOV, Active restaurants)
+
+Real-time filtering
+
+🕵️ Advanced Filters
+
+Date range with calendar picker
+
+Min/max order value filter
+
+Hour range with 24H & AM/PM toggle
+
+Data Visualization
+
+Line charts, bar charts, pie charts
+
+Hover interactions and animations
+
+Fully responsive layout
+
+Build for Production
+npm run build
+
+Security
+
+JWT authentication
+
+Protected routes
+
+Input validation
+
+Error handling
+
+HTTPS ready
+>>>>>>> a055665ba86db53695a317bc31efce6d7f88a6e0
